@@ -1,0 +1,126 @@
+:root{
+    --base-colour:#f9d5e5;
+    --calculator-colour: #fff5ba;
+    --screen-colour:#d5f0f9;
+    --buttons-colour:#e3d5f9;
+    --equals-colour:#ff8ac7;
+    --clear-colour:#cda4ff;
+    --text-colour:darkorchid;
+}
+.darkmode{
+    --base-colour: #2a2a3b;           
+    --calculator-colour: #3b3b4f;     
+    --screen-colour: #4e4e60;         
+    --buttons-colour: #6b5b95;        
+    --equals-colour: #ff66a3;         
+    --clear-colour: #a18bd2;   
+    --text-colour:#f5f5f5;      
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color:  #f9d5e5; */
+    background-color: var(--base-colour);
+    
+}
+* {
+  box-sizing: border-box;
+}
+
+.calculator{
+    /* background-color: #fff5ba; */
+    background-color: var(--calculator-colour);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #e675b2;
+    box-shadow: inset;
+   
+}
+.screen{
+    width: 224px;
+    /* background-color: #d5f0f9; */
+    background-color: var(--screen-colour);
+    font-size: 40px;
+    text-align: end;
+    padding: 4px;
+    border: 2px solid #e675b2;
+    border-radius: 5px;
+    min-height: 60px;
+    overflow: hidden;
+    /* color: rgb(158, 35, 220); */
+    color: var(--text-colour);
+    font-family: cursive;
+    flex-shrink: 0;
+}
+
+.buttons{
+    width: 232px;
+    display: flex;
+    flex-wrap: wrap;
+}
+button{
+    /* background-color: #e3d5f9; */
+    background-color: var(--buttons-colour);
+    border: none;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 4px;
+    border: .5px solid #e675b2;
+    /* color: darkorchid; */
+    color: var(--text-colour);
+    font-family: cursive;
+    text-align: center;
+    
+}
+button:hover{
+    background-color:#ccbff0;
+}
+button:active{
+    background-color: #bba6e9;
+}
+#equals{
+    /* background-color: 	#ff8ac7; */
+    background-color: var(--equals-colour);
+}
+#equals:hover{
+    background-color: #e675b2;
+    
+}
+#clear{
+    width: 100%;
+    /* background-color: #cda4ff; */
+    background-color: var(--clear-colour);
+    font-size: 30px;
+}
+#clear:hover{
+    background-color: #b88cf2;
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: var(--base-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    bottom: 20px;
+}
+#theme-switch svg{
+    fill: var(--equals-colour);
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
